@@ -1,0 +1,68 @@
+form for architecture 
+
+contact information
+
+Name of Artist : 
+email : 
+phone number:
+facebook: 
+instagram:
+twitter:
+website :
+
+upload media:  let it be able to upload multiple photos 
+
+submit and reset button
+
+
+form for housing property
+
+Name of Owner : 
+email : 
+phone number:
+facebook: 
+instagram:
+twitter:
+website :
+
+type : option field 
+
+upload media : let it be able to upload multiple photos
+
+description: has hidden field for specific details which are 
+1. number of bathrooms
+2. number of toilets
+3. number of bedrooms 
+4. any other description.
+
+submit and reset button
+
+
+form for companies 
+
+1. name of company 
+email : 
+phone number:
+facebook: 
+instagram:
+twitter:
+website :
+2. description
+3. upload media : photos of the company 
+4. Portofolio blocks 
+   - add 5 portoflios
+   the portofolio is simply a description area detailing projects the company has undertaken 
+
+   submit and reset button
+
+
+
+form for blog posts 
+
+1. name of author 
+2. text area for blog post
+3. upload artwork for blog post 
+4. references if any.
+
+submit and reset button
+

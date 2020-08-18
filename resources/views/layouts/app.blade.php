@@ -23,7 +23,7 @@
 
 
 </head>
-<body>
+<body style="background-image: url('images/work-8.jpg');">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -45,7 +45,7 @@
                         <!-- Authentication Links -->
                            @if (Route::has('login'))
                               <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+                                    <a class="nav-link" href="{{ route('welcome') }}">{{ __('Home') }}</a>
                                 </li>
                             @endif
                         @guest

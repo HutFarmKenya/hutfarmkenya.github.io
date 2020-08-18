@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/uploadchoice', 'UploadChoiceController@index')->name('uploadchoice');
+Route::get('/welcome', 'LandingController@index')->name('welcome');
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
