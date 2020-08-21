@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\UploadChoice;
+use App\FormModel;
 use Illuminate\Http\Request;
 
-class UploadChoiceController extends Controller
+class FormController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,10 @@ class UploadChoiceController extends Controller
      */
     public function index()
     {
-        //launch home view : this name references the blade file
-       //returning all data 
-        $users = UploadChoice::all();
-        //take me to uploads listing
-        return view('uploadchoice.uploadchoice',['users' => $users]);
+      
+          //take me to houses upload
+        return view('formuploads.formupload');
+
     }
 
     /**
@@ -45,10 +44,10 @@ class UploadChoiceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\UploadChoice  $uploadChoice
+     * @param  \App\FormModel  $formModel
      * @return \Illuminate\Http\Response
      */
-    public function show(UploadChoice $uploadChoice)
+    public function show(FormModel $formModel)
     {
         //
     }
@@ -56,10 +55,10 @@ class UploadChoiceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\UploadChoice  $uploadChoice
+     * @param  \App\FormModel  $formModel
      * @return \Illuminate\Http\Response
      */
-    public function edit(UploadChoice $uploadChoice)
+    public function edit(FormModel $formModel)
     {
         //
     }
@@ -68,10 +67,10 @@ class UploadChoiceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\UploadChoice  $uploadChoice
+     * @param  \App\FormModel  $formModel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, UploadChoice $uploadChoice)
+    public function update(Request $request, FormModel $formModel)
     {
         //
     }
@@ -79,17 +78,46 @@ class UploadChoiceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\UploadChoice  $uploadChoice
+     * @param  \App\FormModel  $formModel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(UploadChoice $uploadChoice)
+    public function destroy(FormModel $formModel)
     {
         //
     }
 
-    //method to take user to form view 
-    public function uploadForm($id){
-        //return view here 
-        return view('formUploads.formUpload');
+
+       public function uploadingForm()
+    {
+ 
+        
+        //take me to profile form
+        return view('formuploads.formupload');
+
     }
+
+           public function formArchi()
+    {
+     
+        //take me to architects form
+        return view('formuploads.formArchitecture');
+
+    }
+
+             public function formCompany()
+    {
+                
+        //take me to company form
+        return view('formuploads.formCompanies');
+
+    }
+
+        public function formBlog()
+    {
+        
+        //take me to blogging form
+        return view('formuploads.formBloging');
+    }
+
+
 }

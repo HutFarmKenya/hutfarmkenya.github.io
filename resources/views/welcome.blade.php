@@ -48,31 +48,9 @@
         </div>
       </nav>
     <!-- END nav -->
-    
-    <div class="hero-wrap" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
-        <br><br><br><br>
-        <div class="container">
-              <div class="jumbotron" id="jumboLead" style="background: none;">
-            <div class="container">
-                <div class="row">
-                       <div class="col">
-                        <p style="color: #fff;">
-                            <strong>
-                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                            </strong>
-                          
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>  
-        </div>
- 
-
-    </div>
 
 
-    <section class="ftco-section ftco-no-pb">
+    <section class="ftco-section ftco-no-pb" style="margin-top: 50px;">
         <div class="container">
             <div class="row">
                     <div class="col-md-12">

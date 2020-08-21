@@ -53,8 +53,13 @@
     <!-- END nav -->
 
     <hr style="">
+                        @if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@endif
     <?php foreach ( $users as $users ) : ?>
-    <p style="padding: 10px;"><strong>Hello {{$users->name}}, select Upload Category</strong></p>
+    <p style="padding: 10px;"><strong>Hello {{ Auth::user()->name }}, select Upload Category</strong></p>
    
     <hr style="">
 
@@ -67,7 +72,7 @@
                <h5 class="card-title">Housing</h5>
                <p class="card-text">Showcase ypur housing properties. Upload apartments,bungalows,mansions e.t.c</p>
                <!--  -->
-               <a href="#" class="btn btn-outline-light btn-sm">Upload</a>
+               <a href="{{route('form_upload')}}" class="btn btn-outline-light btn-sm">Upload</a>
 
             </div>
          </div>
@@ -79,7 +84,7 @@
             <div class="card-body">
                <h5 class="card-title">Architecture</h5>
                <p class="card-text">Are you an architect? .Advertise your Architectural designs on HutFarm for exposure to our browsers</p>
-               <a href="#" class="btn btn-outline-light btn-sm">Upload</a>
+               <a href="{{route('archi_upload')}}" class="btn btn-outline-light btn-sm">Upload</a>
             </div>
          </div>
       </div>
@@ -90,7 +95,7 @@
             <div class="card-body">
                <h5 class="card-title">Construction Company Showcase</h5>
                <p class="card-text">Upload Companies Portfolio on HutFarm.</p>
-               <a href="#" class="btn btn-outline-light btn-sm">Upload</a>
+               <a href="{{route('company_upload')}}" class="btn btn-outline-light btn-sm">Upload</a>
             </div>
          </div>
       </div>
@@ -101,7 +106,7 @@
             <div class="card-body">
                <h5 class="card-title">Blog</h5>
                <p class="card-text">Contribute to HutFarm's blog post on issues property, architecture and construction companies.</p>
-               <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-light btn-sm">Upload</a>
+               <a href="{{route('blog_upload')}}" class="btn btn-outline-light btn-sm">Upload</a>
             </div>
          </div>
       </div>

@@ -1,7 +1,4 @@
 toDo
 
-1. create new controller 
-2. page where file should redirect to after login also check that 
-3. create new view for interface after login : for upload its a form
-4. for viewing it is a cardview as in eMobilis Alumni site then it opens a profile set for the image 
-5. set up updating and delete functionality
+1. submit form details so first create the necessary tables through migration commands 
+2. create the listing views for each section 
