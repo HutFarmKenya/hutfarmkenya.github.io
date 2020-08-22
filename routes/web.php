@@ -19,14 +19,6 @@ Route::get('/', function () {
 
 Route::get('/uploadchoice', 'UploadChoiceController@index')->name('uploadchoice');
 Route::get('/welcome', 'LandingController@index')->name('welcome');
-// Route::get('/formupload', 'FormController@uploadingForm')->name('upload_form'); //form for houses upload 
-// Route::get('/formArchi', 'FormController@formArchi')->name('upload_archi'); //form for architecture upload 
-// Route::get('/formCompany', 'FormController@formCompany')->name('upload_company'); //form for company upload 
-// Route::get('/formBlog', 'FormController@formBlog')->name('upload_blog'); //form for architecture upload
-
-
- 
-
 //defining routes for form uploads 
 //houses 
 Route::get('/formupload','HousesController@create')->name('upload_form'); //form houses get request 
@@ -41,11 +33,19 @@ Route::post('/formCompany','CompanyController@store')->name('company_upload');
 //blog
 Route::get('/formBlog','BlogController@create')->name('upload_blog'); //form blog get request 
 Route::post('/formBlog','BlogController@store')->name('blog_upload');
-
-
-
-
-
+//Listing choice routes 
+Route::get('/listingChoice','ListingChoiceController@index')->name('listing_choice');
+//listing catalogues
+Route::get('/housingListing','housingListingController@index')->name('housing');
+Route::get('/archiListing','archiListingController@index')->name('archi');
+Route::get('/companyListing','companyListingController@index')->name('company');
+Route::get('/blogListing','blogingListingController@index')->name('blogs');
+//listing details
+Route::get('/housingDetails','housingListingController@housingDetails')->name('housing_details');
+Route::get('/archiDetails','archiListingController@archiDetails')->name('archi_details');
+Route::get('/companyDetails','companyListingController@companyDetails')->name('company_details');
+Route::get('/blogDetails','blogingListingController@blogDetails')->name('blog_details');
+//auth routes
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

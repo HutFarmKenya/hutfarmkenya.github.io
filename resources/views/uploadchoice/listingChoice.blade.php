@@ -63,29 +63,16 @@
 
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a href="{{route('home')}}" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="{{route('listing_choice')}}" class="nav-link">Listing</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+              <li class="nav-item active"><a href="{{route('welcome')}}" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="{{route('home')}}" class="nav-link">Upload To HutFarm</a></li>
               <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="{{route('logout')}}" class="nav-link">Logout</a></li>
             </ul>
           </div>
         </div>
       </nav>
     <!-- END nav -->
-
-    <br>
 <br>
-
-    <hr style="">
-                        @if(session()->has('message'))
-    <div class="alert alert-success">
-        {{ session()->get('message') }}
-    </div>
-@endif
-    <?php foreach ( $users as $users ) : ?>
-    <p style="padding: 10px;"><strong>Hello {{ Auth::user()->name }}, select Upload Category</strong></p>
-   
+<br>
     <hr style="">
 
       <div class="row" style="padding: 10px;">
@@ -95,9 +82,9 @@
             <img class="card-img-top" src='images/bg_2.jpg' alt="Card image cap">
             <div class="card-body">
                <h5 class="card-title">Housing</h5>
-               <p class="card-text">Upload various housing properties e.g apartments,bungalows,mansions etc.</p>
+               <p class="card-text">Browse our housing catalogue</p>
                <!--  -->
-               <a href="{{route('form_upload')}}" class="btn btn-outline-light btn-sm">Upload</a>
+               <a href="{{route('housing')}}" class="btn btn-outline-light btn-sm">Go to Listing</a>
 
             </div>
          </div>
@@ -108,8 +95,8 @@
             <img class="card-img-top" src='images/archi.jpg' alt="Card image cap">
             <div class="card-body">
                <h5 class="card-title">Architecture</h5>
-               <p class="card-text">Are you an architect? .Advertise your Architectural designs on HutFarm for exposure to our browsers</p>
-               <a href="{{route('archi_upload')}}" class="btn btn-outline-light btn-sm">Upload</a>
+               <p class="card-text">Browse our Architecture catalogue</p>
+               <a href="{{route('archi')}}" class="btn btn-outline-light btn-sm">Go to Listing</a>
             </div>
          </div>
       </div>
@@ -118,9 +105,9 @@
          <div class="card mb-3 text-white bg-dark" >
             <img class="card-img-top" src='images/companies.jpg' alt="Card image cap">
             <div class="card-body">
-               <h5 class="card-title">Construction Company Showcase</h5>
-               <p class="card-text">Upload Companies Portfolio on HutFarm.</p>
-               <a href="{{route('company_upload')}}" class="btn btn-outline-light btn-sm">Upload</a>
+               <h5 class="card-title">Construction Companies</h5>
+               <p class="card-text">Browse our companies profiles.</p>
+               <a href="{{route('company')}}" class="btn btn-outline-light btn-sm">Go to Listing</a>
             </div>
          </div>
       </div>
@@ -130,13 +117,13 @@
             <img class="card-img-top" src='images/work-7.jpg' alt="Card image cap">
             <div class="card-body">
                <h5 class="card-title">Blog</h5>
-               <p class="card-text">Contribute to HutFarm's blog post on issues property, architecture and construction companies.</p>
-               <a href="{{route('blog_upload')}}" class="btn btn-outline-light btn-sm">Upload</a>
+               <p class="card-text">Browse our blog posts</p>
+               <a href="{{route('blogs')}}" class="btn btn-outline-light btn-sm">Go to Listing</a>
             </div>
          </div>
       </div>
  
- <?php endforeach; ?>
+
     <div class="container" id="contact">
        <div class="jumbotron">
              <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive;" >Get In Touch</h3>
