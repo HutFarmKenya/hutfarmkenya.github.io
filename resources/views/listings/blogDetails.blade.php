@@ -46,52 +46,36 @@
                 
 		 		<div class="container">
 		 				<div class="row">
+		 					 <?php foreach (json_decode($blog_pieces->images)as $picture) : ?>
 		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
+		 			<img src="{{ asset('/blogimages/'.$picture) }}" alt="..." class="img-thumbnail">
 		 		
 		 	</div>
 
-		 
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-		 		</div>
-		
-
-		 		
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-
-		 		</div>
-		
-
-		 	
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-	 			
-		 		</div>
+	  <?php endforeach; ?>
 		 			
 		 		</div>
 		 		<br>
 		 		<div class="container">
 		 			<div class="row">
 		 				<div class="col-sm">
-		 					<p>Name</p>
-		 					<p>Email</p>
-		 					<p>Website</p>
-		 					<p>Phone Number</p>
+		 					<p>{{$blog_pieces->name}}</p>
+		 					<p>{{$blog_pieces->email}}</p>
+		 					<p>{{$blog_pieces->phone}}</p>
+		 					<p>{{$blog_pieces->website}}</p>
 
 		 				</div>
 
 		 				<div class="col-sm">
 		 						<div class="row">
 		 				
-		 				<h3>Blog Title</h3>
+		 				<h3>{{$blog_pieces->blogTitle}}</h3>
 		 				
 		 			</div>
 
 		 			<div class="row">
 		 			
-		 				<p>Blog Piece</p>
+		 				<p>{{$blog_pieces->blogDescription}}</p>
 		 			</div>
 		 				</div>
 

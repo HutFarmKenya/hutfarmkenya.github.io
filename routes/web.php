@@ -41,10 +41,10 @@ Route::get('/archiListing','archiListingController@index')->name('archi');
 Route::get('/companyListing','companyListingController@index')->name('company');
 Route::get('/blogListing','blogingListingController@index')->name('blogs');
 //listing details
-Route::get('/housingDetails','housingListingController@housingDetails')->name('housing_details');
-Route::get('/archiDetails','archiListingController@archiDetails')->name('archi_details');
-Route::get('/companyDetails','companyListingController@companyDetails')->name('company_details');
-Route::get('/blogDetails','blogingListingController@blogDetails')->name('blog_details');
+Route::get('/housingDetails/{id}','housingListingController@housingDetails')->name('housing_details');
+Route::get('/archiDetails/{id}','archiListingController@archiDetails')->name('archi_details');
+Route::get('/companyDetails/{id}','companyListingController@companyDetails')->name('company_details');
+Route::get('/blogDetails/{id}','blogingListingController@blogDetails')->name('blog_details');
 //auth routes
 Auth::routes();
 

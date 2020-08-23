@@ -47,50 +47,34 @@
                 
 		 		<div class="container">
 		 				<div class="row">
+		 					 <?php foreach (json_decode($archi_pieces->images)as $picture) : ?>
 		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
+		 			<img src="{{ asset('/architectureimages/'.$picture) }}" alt="..." class="img-thumbnail">
 		 		
 		 	</div>
 
-		 
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-		 		</div>
-		
-
-		 		
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-
-		 		</div>
-		
-
-		 	
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-	 			
-		 		</div>
+	  <?php endforeach; ?>
 		 			
 		 		</div>
 		 		<br>
 		 		<div class="container">
 		 			<div class="row">
 		 				<div class="col-sm">
-		 					<p>Name</p>
-		 					<p>Email</p>
-		 					<p>Website</p>
-		 					<p>Phone Number</p>
+		 					<p>{{$archi_pieces->name}}</p>
+		 					<p>{{$archi_pieces->email}}</p>
+		 					<p>{{$archi_pieces->phone}}</p>
+		 					<p>{{$archi_pieces->website}}</p>
 
 		 				</div>
 
 		 				<div class="col-sm">
 		 						<div class="row">
 		 				
-		 				<h3>Archi Title</h3>
+		 				<h3>{{$archi_pieces->architectureName}}</h3>
 		 			</div>
 
 		 			<div class="row">
-		 				<p>Archi Description</p>
+		 				<p>{{$archi_pieces->architectureDesc}}</p>
 		 			</div>
 		 				</div>
 

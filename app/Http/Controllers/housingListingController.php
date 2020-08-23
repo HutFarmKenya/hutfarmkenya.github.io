@@ -15,7 +15,8 @@ class housingListingController extends Controller
     public function index()
     {
         //
-                return view('listings.housingListing');
+                $house_piece = housingListingModel::select('id','name','email','phone','website','images','houseType','houseLocation','housePriceLimit','houseStatus','houseBeds','houseBaths','houseSize','houseDescription')->where('uploadtype','Houses')->get();
+                return view('listings.housingListing',['house_piece' => $house_piece]);
 
     }
 
@@ -85,7 +86,14 @@ class housingListingController extends Controller
         //
     }
 
-    public function housingDetails(){
-        return view('listings.houseDetails');
+    public function housingDetails($id){
+
+       $house_piece = housingListingModel::find($id);
+
+        return view('listings.houseDetails',compact('house_piece'));
     }
+
+
+  
+
 }

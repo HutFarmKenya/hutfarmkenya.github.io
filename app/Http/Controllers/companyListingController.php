@@ -14,8 +14,9 @@ class companyListingController extends Controller
      */
     public function index()
     {
-        //
-                return view('listings.companiesListing');
+        //   
+         $company_piece = companyListingModel::select('id','name','email','phone','website','images','companyServiceName','companyServiceDescription')->where('uploadtype','Company')->get();
+                return view('listings.companiesListing',['company_piece' => $company_piece]);
 
     }
 
@@ -85,7 +86,9 @@ class companyListingController extends Controller
         //
     }
 
-       public function companyDetails(){
-        return view('listings.companyDetails');
+       public function companyDetails($id){
+
+       $company_piece = companyListingModel::find($id);
+        return view('listings.companyDetails',compact('company_piece'));
     }
 }

@@ -79,38 +79,20 @@
   <section>
     <div class="container">
   <div class="row">
+  <?php foreach ( $blog_pieces as $blog_pieces) : ?>
+
   <div class="col-sm-4">
     <div class="card">
-        <img class="card-img-top" src="images/bg_2.jpg" alt="Card image cap">
+        <?php  $blog_images = json_decode($blog_pieces->images);?>
+        <img class="card-img-top" src="{{ asset('/blogimages/'.$blog_images[0]) }}" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="{{route('blog_details')}}" class="btn btn-primary">View Profile</a>
+        <h5 class="card-title">{{$blog_pieces->blogTitle}}</h5>
+        <p class="card-text">by: {{$blog_pieces->name}}</p>
+        <a href="{{ url('blogDetails/' . $blog_pieces->id) }}" class="btn btn-primary">View Profile</a>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="card">
-              <img class="card-img-top" src="images/bg_2.jpg" alt="Card image cap">
-
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="{{route('blog_details')}}" class="btn btn-primary">View Profile</a>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-4">
-    <div class="card">
-              <img class="card-img-top" src="images/bg_2.jpg" alt="Card image cap">
-
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="{{route('blog_details')}}" class="btn btn-primary">View Profile</a>
-      </div>
-    </div>
-  </div>
+        <?php endforeach; ?>
 </div> 
       
     </div>

@@ -47,54 +47,43 @@
                 
 		 		<div class="container">
 		 				<div class="row">
+		 					 <?php foreach (json_decode($house_piece->images)as $picture) : ?>
 		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
+		 			<img src="{{ asset('/companyimages/'.$picture) }}" alt="..." class="img-thumbnail">
 		 		
 		 	</div>
 
-		 
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-		 		</div>
-		
-
-		 		
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-
-		 		</div>
-		
-
-		 	
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-	 			
-		 		</div>
+	  <?php endforeach; ?>
 		 			
 		 		</div>
 		 		<br>
 		 		<div class="container">
 		 			<div class="row">
 		 				<div class="col-sm">
-		 					<p>Name</p>
-		 					<p>Email</p>
-		 					<p>Website</p>
-		 					<p>Phone Number</p>
-		 			        <p>House Type</p>
+		 					<p>{{$house_piece->name}}</p>
+		 					<p>{{$house_piece->email}}</p>
+		 					<p>{{$house_piece->phone}}</p>
+		 					<p>{{$house_piece->website}}</p>
 
 		 				</div>
 
 		 				<div class="col-sm">
-		 					  <p>Number of beds and bathrooms and unit size</p>
-		 					  <p>House Location</p>
-		 					  <p>House status</p>
-		 					  <p>Price Limit</p>
+		 					  <p>beds: {{$house_piece->houseBeds}} baths: {{$house_piece->houseBaths}}</p>
+		 					  <p>{{$house_piece->houseLocation}}</p>
+		 					  <p>{{$house_piece->houseStatus}}</p>
+		 					  <p>{{$house_piece->housePriceLimit}}</p>
 		 				</div>
 		 			</div>
                      <br>
-		 			<div class="row">
-		 				<p>House Description</p>
+                     <div class="container">
+                     	<div class="row">
+                     		<div class="col-sm">
+                     					 				<p>{{$house_piece->houseDescription}}</p>
+
+                     		</div>
 		 			</div>
+                     </div>
+		 			
 
 		 		</div>
 

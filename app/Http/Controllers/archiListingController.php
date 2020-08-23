@@ -15,7 +15,8 @@ class archiListingController extends Controller
     public function index()
     {
         //
-        return view('listings.archiListing');
+        $archi_pieces = archiListingModel::select('id','name','email','phone','website','images','architectureName','architectureDesc')->where('uploadtype','Architecture')->get();
+        return view('listings.archiListing',['archi_pieces' => $archi_pieces]);
     }
 
     /**
@@ -84,7 +85,9 @@ class archiListingController extends Controller
         //
     }
 
-       public function archiDetails(){
-        return view('listings.archiDetails');
+       public function archiDetails($id){
+          $archi_pieces = archiListingModel::find($id);
+        return view('listings.archiDetails',compact('archi_pieces'));
     }
 }
+     

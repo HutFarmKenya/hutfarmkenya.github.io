@@ -15,7 +15,8 @@ class blogingListingController extends Controller
     public function index()
     {
         //
-                return view('listings.blogListings');
+       $blog_pieces = blogingListingModel::select('id','name','email','phone','website','images','blogTitle','blogDescription')->where('uploadtype','Blog')->get();
+        return view('listings.blogListings',['blog_pieces' => $blog_pieces]);
 
     }
 
@@ -85,7 +86,9 @@ class blogingListingController extends Controller
         //
     }
 
-      public function blogDetails(){
-        return view('listings.blogDetails');
+      public function blogDetails($id){
+
+            $blog_pieces = blogingListingModel::find($id);
+        return view('listings.blogDetails',compact('blog_pieces'));
     }
 }

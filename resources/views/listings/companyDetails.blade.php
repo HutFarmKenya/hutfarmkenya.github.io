@@ -47,45 +47,28 @@
                 
 		 		<div class="container">
 		 				<div class="row">
+		 					 <?php foreach (json_decode($company_piece->images)as $picture) : ?>
 		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
+		 			<img src="{{ asset('/companyimages/'.$picture) }}" alt="..." class="img-thumbnail">
 		 		
 		 	</div>
 
-		 
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-		 		</div>
-		
-
-		 		
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-
-		 		</div>
-		
-
-		 	
-		 		<div class="col-sm-3">
-		 			<img src="images/work-2.jpg" alt="..." class="img-thumbnail">
-	 			
-		 		</div>
-		 			
+	  <?php endforeach; ?>
 		 		</div>
 		 		<br>
 		 		<div class="container">
 		 			<div class="row">
 		 				<div class="col-sm">
-		 					<p>Name</p>
-		 					<p>Email</p>
-		 					<p>Website</p>
-		 					<p>Phone Number</p>
+		 						<p>{{$company_piece->name}}</p>
+		 					<p>{{$company_piece->email}}</p>
+		 					<p>{{$company_piece->phone}}</p>
+		 					<p>{{$company_piece->website}}</p>
 
 		 				</div>
 
 		 				<div class="col-sm">
-		 					  <p>Service Name</p>
-		 					  <p>Service Description</p>
+		 					  <p>{{$company_piece->companyServiceName}}</p>
+		 					  <p>{{$company_piece->companyServiceDescription}}</p>
 		 					 
 		 				</div>
 		 			</div>

@@ -78,40 +78,24 @@
 <!--  -->
   <section>
     <div class="container">
+      <!-- starting loop here -->
   <div class="row">
+     <?php foreach ( $archi_pieces as $archi_pieces) : ?>
+
   <div class="col-sm-4">
     <div class="card">
-        <img class="card-img-top" src="images/bg_2.jpg" alt="Card image cap">
+        <?php  $property_images = json_decode($archi_pieces->images);?>
+        <img class="card-img-top" src="{{ asset('/architectureimages/'.$property_images[0]) }}" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="{{route('archi_details')}}" class="btn btn-primary">View Profile</a>
+        <h5 class="card-title">{{$archi_pieces->architectureName}}</h5>
+        <p class="card-text">{{$archi_pieces->architectureDesc}}</p>
+        <a href="{{ url('archiDetails/' . $archi_pieces->id) }}" class="btn btn-primary">View Profile</a>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="card">
-              <img class="card-img-top" src="images/bg_2.jpg" alt="Card image cap">
+        <?php endforeach; ?>
 
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="{{route('archi_details')}}" class="btn btn-primary">View Profile</a>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-4">
-    <div class="card">
-              <img class="card-img-top" src="images/bg_2.jpg" alt="Card image cap">
-
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="{{route('archi_details')}}" class="btn btn-primary">View Profile</a>
-      </div>
-    </div>
-  </div>
-</div> 
+  </div> 
       
     </div>
 </div>
