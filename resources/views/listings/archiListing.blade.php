@@ -85,10 +85,10 @@
   <div class="col-sm-4">
     <div class="card">
         <?php  $property_images = json_decode($archi_pieces->images);?>
-        <img class="card-img-top" src="{{ asset('/architectureimages/'.$property_images[0]) }}" alt="Card image cap">
+        <img class="card-img-top" src="{{ asset('/uploadImages/'.$property_images[0]) }}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{$archi_pieces->architectureName}}</h5>
-        <p class="card-text">{{$archi_pieces->architectureDesc}}</p>
+        <p class="card-text">drawing by: {{$archi_pieces->name}}</p>
         <a href="{{ url('archiDetails/' . $archi_pieces->id) }}" class="btn btn-primary">View Profile</a>
       </div>
     </div>

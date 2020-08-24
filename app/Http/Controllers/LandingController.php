@@ -15,7 +15,8 @@ class LandingController extends Controller
     public function index()
     {
         //returning welcome page
-        return view('welcome');
+        $submissions = LandingModel::all()->take(9);
+        return view('welcome',['submissions' => $submissions]);
     }
 
     /**

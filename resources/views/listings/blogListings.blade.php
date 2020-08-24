@@ -84,7 +84,7 @@
   <div class="col-sm-4">
     <div class="card">
         <?php  $blog_images = json_decode($blog_pieces->images);?>
-        <img class="card-img-top" src="{{ asset('/blogimages/'.$blog_images[0]) }}" alt="Card image cap">
+        <img class="card-img-top" src="{{ asset('/uploadImages/' .$blog_images[0]) }}" alt="Image not found">
       <div class="card-body">
         <h5 class="card-title">{{$blog_pieces->blogTitle}}</h5>
         <p class="card-text">by: {{$blog_pieces->name}}</p>

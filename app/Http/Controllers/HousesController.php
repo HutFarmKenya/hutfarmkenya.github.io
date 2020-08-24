@@ -70,7 +70,7 @@ class HousesController extends Controller
             foreach ($request->file('my_file') as $image) {
                 # code...
                 $name = $image->getClientOriginalName();
-                $image->move(public_path().'/houseimages',$name);
+                $image->move(public_path().'/uploadImages',$name);
                 $data[] = $name;
             }
         }

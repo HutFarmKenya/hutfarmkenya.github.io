@@ -68,7 +68,7 @@
      <br>
               <div class="row">
               	<div class="col">
-              		 <input type="text" class="form-control" name="companyName" placeholder="Enter your name" required="">
+              		 <input type="text" class="form-control" name="companyName" placeholder="Enter Company name" required="">
               		
               	</div>
               	<div class="col">
@@ -139,7 +139,7 @@
                   	   	<div class="row">
                                 	   		<div class="col">
                                 	   		   <input type="reset" name="save" value="Reset" class="btn btn-danger btn-lg" class="form-control">	
-                                	   		   <input type="submit" value="Upload to HutFarm" class="btn btn-success btn-lg" class="form-control">	
+                                	   		   <input type="submit" value="Upload to HutFarm" class="btn btn-success btn-lg" name="save" class="form-control">	
                                 	   		</div>
                                 	   	</div>
 

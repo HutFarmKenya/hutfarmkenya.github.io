@@ -19,10 +19,20 @@
 
         }
 
-        img {
-           width: 100%;
-           height: 200px;
+        p {
+        	color: #fff;
+        	font-family: 'Comfortaa', cursive;
         }
+
+        h3 {
+        	color: #fff;
+        	font-family: 'Comfortaa', cursive;
+        }
+
+        img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
   
      </style>
 
@@ -49,7 +59,12 @@
 		 				<div class="row">
 		 					 <?php foreach (json_decode($archi_pieces->images)as $picture) : ?>
 		 		<div class="col-sm-3">
-		 			<img src="{{ asset('/architectureimages/'.$picture) }}" alt="..." class="img-thumbnail">
+		 
+
+		 			  	<a target="_blank" href="{{ asset('/uploadImages/'.$picture) }}">
+  <img class="img-thumbnail" src="{{ asset('/uploadImages/'.$picture) }}" alt="HutFarm">
+</a>
+
 		 		
 		 	</div>
 
@@ -60,22 +75,26 @@
 		 		<div class="container">
 		 			<div class="row">
 		 				<div class="col-sm">
+		 					<h3 class="bg-primary" style="padding: 10px; color: #fff; border-radius: 5px;">Listed By:</h3>
+		 									<div style="background-color: #000; padding: 10px;   border: 1px solid white;
+  border-radius: 5px;">
 		 					<p>{{$archi_pieces->name}}</p>
 		 					<p>{{$archi_pieces->email}}</p>
 		 					<p>{{$archi_pieces->phone}}</p>
 		 					<p>{{$archi_pieces->website}}</p>
+		 				</div>
 
 		 				</div>
 
 		 				<div class="col-sm">
-		 						<div class="row">
+		 									<div style="background-color: #000; padding: 10px;   border: 1px solid white;
+  border-radius: 5px;">
+		 			
 		 				
 		 				<h3>{{$archi_pieces->architectureName}}</h3>
-		 			</div>
-
-		 			<div class="row">
+		 		
 		 				<p>{{$archi_pieces->architectureDesc}}</p>
-		 			</div>
+		 		</div>
 		 				</div>
 
 		 			
@@ -104,7 +123,7 @@
 
     <div class="container" id="contact">
        <div class="jumbotron">
-             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive;" >Get In Touch</h3>
+             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive; color: #000;"  >Get In Touch</h3>
 
           <!--the socials to get in touch-->
 <div class="container h-100 d-flex justify-content-center">

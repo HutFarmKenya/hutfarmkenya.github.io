@@ -63,7 +63,7 @@ class CompanyController extends Controller
             foreach ($request->file('my_file') as $image) {
                 # code...
                 $name = $image->getClientOriginalName();
-                $image->move(public_path().'/companyimages',$name);
+                $image->move(public_path().'/uploadImages',$name);
                 $data[] = $name;
             }
         }

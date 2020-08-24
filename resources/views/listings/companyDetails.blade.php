@@ -23,6 +23,16 @@
            width: 100%;
            height: 200px;
         }
+
+           p {
+        	color: #fff;
+        	font-family: 'Comfortaa', cursive;
+        }
+
+        h3 {
+        	color: #fff;
+        	font-family: 'Comfortaa', cursive;
+        }
   
      </style>
 
@@ -49,8 +59,10 @@
 		 				<div class="row">
 		 					 <?php foreach (json_decode($company_piece->images)as $picture) : ?>
 		 		<div class="col-sm-3">
-		 			<img src="{{ asset('/companyimages/'.$picture) }}" alt="..." class="img-thumbnail">
-		 		
+
+		 			  	<a target="_blank" href="{{ asset('/uploadImages/'.$picture) }}">
+  <img class="img-thumbnail" src="{{ asset('/uploadImages/'.$picture) }}" alt="HutFarm">
+</a>		 		
 		 	</div>
 
 	  <?php endforeach; ?>
@@ -59,17 +71,22 @@
 		 		<div class="container">
 		 			<div class="row">
 		 				<div class="col-sm">
+		 						<h3 class="bg-primary" style="padding: 10px; color: #fff; border-radius: 5px;">Listed By:</h3>
+		 													<div style="background-color: #000; padding: 10px;   border: 1px solid white;
+  border-radius: 5px;">
 		 						<p>{{$company_piece->name}}</p>
 		 					<p>{{$company_piece->email}}</p>
 		 					<p>{{$company_piece->phone}}</p>
 		 					<p>{{$company_piece->website}}</p>
-
+</div>
 		 				</div>
 
 		 				<div class="col-sm">
+		 																		<div style="background-color: #000; padding: 10px;   border: 1px solid white;
+  border-radius: 5px;">
 		 					  <p>{{$company_piece->companyServiceName}}</p>
 		 					  <p>{{$company_piece->companyServiceDescription}}</p>
-		 					 
+		 					 </div>
 		 				</div>
 		 			</div>
                      
@@ -93,7 +110,7 @@
 
     <div class="container" id="contact">
        <div class="jumbotron">
-             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive;" >Get In Touch</h3>
+             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive; color: #000;" >Get In Touch</h3>
 
           <!--the socials to get in touch-->
 <div class="container h-100 d-flex justify-content-center">

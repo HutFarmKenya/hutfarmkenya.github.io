@@ -61,7 +61,7 @@ class ArchitectureController extends Controller
             foreach ($request->file('my_file') as $image) {
                 # code...
                 $name = $image->getClientOriginalName();
-                $image->move(public_path().'/architectureimages',$name);
+                $image->move(public_path().'/uploadImages',$name);
                 $data[] = $name;
             }
         }
@@ -73,7 +73,7 @@ class ArchitectureController extends Controller
 return redirect('/uploadchoice')->with('message', 'Your architecture post has been successfully submitted to HutFarm'); 
     }
 
-           }
+           
 
     /**
      * Display the specified resource.

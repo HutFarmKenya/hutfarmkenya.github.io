@@ -105,7 +105,7 @@
 					  <option value="Houses">Houses</option>
 					  <option value="Apartment">Apartment</option>
 					  <option value="Bungalows">Bungalows</option>
-					  		<option value="Mansions">Villa</option>
+					  		<option value="Villa">Villa</option>
 
 					</select>
                     	</div>
@@ -130,8 +130,8 @@
                     		                    		<label for=propType>Property Status</label>
 
                     		  <select class="form-control" name="propstatus">
-					  <option value="Houses">Rent</option>
-					  <option value="Apartment">Sale</option>
+					  <option value="Rent">Rent</option>
+					  <option value="Sale">Sale</option>
 					 >
 
 					</select>               

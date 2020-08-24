@@ -23,6 +23,11 @@
            width: 100%;
            height: 200px;
         }
+
+        p,h3 {
+        	color: #fff;
+        	font-family: 'Comfortaa', cursive;
+        }
   
      </style>
 
@@ -48,7 +53,12 @@
 		 				<div class="row">
 		 					 <?php foreach (json_decode($blog_pieces->images)as $picture) : ?>
 		 		<div class="col-sm-3">
-		 			<img src="{{ asset('/blogimages/'.$picture) }}" alt="..." class="img-thumbnail">
+		 		<!-- 	<img src="{{ asset('/uploadImages/'.$picture) }}" alt="no image" class="img-thumbnail"> -->
+
+
+		 			  	<a target="_blank" href="{{ asset('/uploadImages/'.$picture) }}">
+  <img class="img-thumbnail" src="{{ asset('/uploadImages/'.$picture) }}" alt="HutFarm">
+</a>
 		 		
 		 	</div>
 
@@ -59,21 +69,21 @@
 		 		<div class="container">
 		 			<div class="row">
 		 				<div class="col-sm">
+		 									<h3 class="bg-primary" style="padding: 10px; color: #fff; border-radius: 5px;">Written By:</h3>
+		 													<div style="background-color: #000; padding: 10px;   border: 1px solid white;
+  border-radius: 5px;">
 		 					<p>{{$blog_pieces->name}}</p>
 		 					<p>{{$blog_pieces->email}}</p>
 		 					<p>{{$blog_pieces->phone}}</p>
 		 					<p>{{$blog_pieces->website}}</p>
-
+</div>
 		 				</div>
 
 		 				<div class="col-sm">
-		 						<div class="row">
-		 				
-		 				<h3>{{$blog_pieces->blogTitle}}</h3>
-		 				
-		 			</div>
-
-		 			<div class="row">
+		 				<div style="background-color: #000; padding: 10px;   border: 1px solid white;
+  border-radius: 5px;">
+		 				<h3 class="bg-warning" style="padding: 5px;">{{$blog_pieces->blogTitle}}</h3>
+		 
 		 			
 		 				<p>{{$blog_pieces->blogDescription}}</p>
 		 			</div>
@@ -105,7 +115,7 @@
 
     <div class="container" id="contact">
        <div class="jumbotron">
-             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive;" >Get In Touch</h3>
+             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive; color: #000;" >Get In Touch</h3>
 
           <!--the socials to get in touch-->
 <div class="container h-100 d-flex justify-content-center">

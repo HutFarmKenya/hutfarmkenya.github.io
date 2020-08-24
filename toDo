@@ -1,4 +1,8 @@
 toDo
 
-1. submit form details so first create the necessary tables through migration commands 
-2. create the listing views for each section 
+1. work on home page functionalities.
+2. implement the property search bar: https://medium.com/justlaravel/search-functionality-in-laravel-a2527282150b :
+
+3. work on footer page in home screen.
+4. redesign details pages and any other design change. 
+5. redesign re sign in screen the one with the proceed to upload screen

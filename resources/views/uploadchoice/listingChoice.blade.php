@@ -81,8 +81,8 @@
          <div class="card mb-3 text-white bg-dark" >
             <img class="card-img-top" src='images/bg_2.jpg' alt="Card image cap">
             <div class="card-body">
-               <h5 class="card-title">Housing</h5>
-               <p class="card-text">Browse our housing catalogue</p>
+               <h5 class="card-title" style="color: #fff;">Housing</h5>
+               <p class="card-text" >Browse our housing catalogue</p>
                <!--  -->
                <a href="{{route('housing')}}" class="btn btn-outline-light btn-sm">Go to Listing</a>
 
@@ -94,7 +94,7 @@
          <div class="card mb-3 text-white bg-dark" >
             <img class="card-img-top" src='images/archi.jpg' alt="Card image cap">
             <div class="card-body">
-               <h5 class="card-title">Architecture</h5>
+               <h5 class="card-title" style="color: #fff;">Architecture</h5>
                <p class="card-text">Browse our Architecture catalogue</p>
                <a href="{{route('archi')}}" class="btn btn-outline-light btn-sm">Go to Listing</a>
             </div>
@@ -105,7 +105,7 @@
          <div class="card mb-3 text-white bg-dark" >
             <img class="card-img-top" src='images/companies.jpg' alt="Card image cap">
             <div class="card-body">
-               <h5 class="card-title">Construction Companies</h5>
+               <h5 class="card-title" style="color: #fff;">Construction Companies</h5>
                <p class="card-text">Browse our companies profiles.</p>
                <a href="{{route('company')}}" class="btn btn-outline-light btn-sm">Go to Listing</a>
             </div>
@@ -116,7 +116,7 @@
          <div class="card mb-3 text-white bg-dark" >
             <img class="card-img-top" src='images/work-7.jpg' alt="Card image cap">
             <div class="card-body">
-               <h5 class="card-title">Blog</h5>
+               <h5 class="card-title" style="color: #fff;">Blog</h5>
                <p class="card-text">Browse our blog posts</p>
                <a href="{{route('blogs')}}" class="btn btn-outline-light btn-sm">Go to Listing</a>
             </div>

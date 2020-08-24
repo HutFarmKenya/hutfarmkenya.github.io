@@ -84,7 +84,7 @@
   <div class="col-sm-4">
     <div class="card">
         <?php  $company_images = json_decode($company_piece->images);?>
-        <img class="card-img-top" src="{{ asset('/companyimages/'.$company_images[0]) }}" alt="Card image cap">
+        <img class="card-img-top" src="{{ asset('/uploadImages/'.$company_images[0]) }}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{$company_piece->companyServiceName}}</h5>
         <p class="card-text">{{$company_piece->name}}</p>

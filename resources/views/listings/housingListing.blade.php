@@ -84,10 +84,10 @@
   <div class="col-sm-4">
     <div class="card">
         <?php  $house_images = json_decode($house_piece->images);?>
-        <img class="card-img-top" src="{{ asset('/houseimages/'.$house_images[0]) }}" alt="Card image cap">
+        <img class="card-img-top" src="{{ asset('/uploadImages/'.$house_images[0]) }}" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{$house_piece->houseType}}</h5>
-        <p class="card-text">{{$house_piece->houseStatus}}</p>
+        <h5 class="card-title">Property Type: {{$house_piece->houseType}}</h5>
+        <p class="card-text">Status: {{$house_piece->houseStatus}}</p>
         <p class="card-text">KES:{{$house_piece->housePriceLimit}}</p>
         <a href="{{ url('housingDetails/' . $house_piece->id) }}" class="btn btn-primary">View Profile</a>
       </div>
