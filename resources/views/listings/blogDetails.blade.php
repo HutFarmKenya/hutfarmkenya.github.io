@@ -18,6 +18,11 @@
             text-decoration: none;
 
         }
+        
+        .jumbotron{
+          background-color: transparent;
+        }
+
 
         img {
            width: 100%;
@@ -69,30 +74,41 @@
 		 		<div class="container">
 		 			<div class="row">
 		 				<div class="col-sm">
-		 									<h3 class="bg-primary" style="padding: 10px; color: #fff; border-radius: 5px;">Written By:</h3>
-		 													<div style="background-color: #000; padding: 10px;   border: 1px solid white;
-  border-radius: 5px;">
-		 					<p>{{$blog_pieces->name}}</p>
-		 					<p>{{$blog_pieces->email}}</p>
-		 					<p>{{$blog_pieces->phone}}</p>
-		 					<p>{{$blog_pieces->website}}</p>
-</div>
+		 					                      			 			   <div class="container ">
+<h3 class="bg-primary" style="padding: 10px; color: #fff; border-radius: 5px;">Posted By:</h3>            <ul class="list-group">
+                <li class="list-group-item">{{$blog_pieces->name}}</li>
+                <li class="list-group-item">{{$blog_pieces->email}}</li>
+                <li class="list-group-item"><a href="{{$blog_pieces->website}}">{{$blog_pieces->website}}</a></li>
+       
+            </ul>
+        </div> 
+
 		 				</div>
 
-		 				<div class="col-sm">
-		 				<div style="background-color: #000; padding: 10px;   border: 1px solid white;
-  border-radius: 5px;">
-		 				<h3 class="bg-warning" style="padding: 5px;">{{$blog_pieces->blogTitle}}</h3>
-		 
-		 			
-		 				<p>{{$blog_pieces->blogDescription}}</p>
-		 			</div>
-		 				</div>
 
 		 			
 		 			</div>
 
 		 			<br>
+
+		 			<div class="container">
+		 					 			<div class="row">
+		 					 				<div class="col-sm">
+		 					 				 				<h3 class="bg-info" style="padding: 10px; color: #fff; border-radius: 5px;">{{$blog_pieces->blogTitle}}</h3>          
+		 				  <ul class="list-group">
+                <li class="list-group-item">{{$blog_pieces->blogDescription}}</li>
+              
+       
+            </ul>	
+		 					 				</div>
+		
+		 					
+		 				</div>
+		 				
+		 			</div>
+
+	
+		 			</div>
 		 		
                      
 
@@ -112,14 +128,13 @@
 	</section>
 
 
-
-    <div class="container" id="contact">
+                <div class="container" id="contact">
        <div class="jumbotron">
-             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive; color: #000;" >Get In Touch</h3>
+             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive;" >Get In Touch</h3>
 
           <!--the socials to get in touch-->
 <div class="container h-100 d-flex justify-content-center">
-    <a href="https://www.instagram.com" target="_blank" class="fa fa-envelope">   </a>
+    <a href="mailto:myemail@site.com?Subject=HutFarm%20inquiry" target="_blank" class="fa fa-envelope">   </a>
 
     <a href="https://www.instagram.com" target="_blank" class="fa fa-facebook">   </a>
     <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter">  </a>

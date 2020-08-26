@@ -32,9 +32,15 @@
         }
 
         li {
-        	color: #fff;
+        	color: #000;
         	font-family: 'Comfortaa', cursive;
         }
+
+        
+        .jumbotron{
+          background-color: transparent;
+        }
+
   
      </style>
 
@@ -74,29 +80,27 @@
 		 		<div class="container">
 		 			<div class="row">
 		 				<div class="col-sm">
-		 					<h3 class="bg-primary" style="padding: 10px; color: #fff; border-radius: 5px;">Listed By:</h3>
-		 					<div style="background-color: #000; padding: 10px;   border: 1px solid white;
-  border-radius: 5px;">
-		 					<p>{{$house_piece->name}}</p>
-		 					<p>{{$house_piece->email}}</p>
-		 					<p>{{$house_piece->phone}}</p>
-		 					<p>{{$house_piece->website}}</p>
-                            </div>
+                                                                               <div class="container ">
+<h3 class="bg-primary" style="padding: 10px; color: #fff; border-radius: 5px;">Listed By:</h3>            <ul class="list-group">
+                <li class="list-group-item">{{$house_piece->name}}</li>
+                <li class="list-group-item">{{$house_piece->email}}</li>
+                <li class="list-group-item">{{$house_piece->phone}}</li>
+                <li class="list-group-item"><a href="{{$house_piece->website}}">{{$house_piece->website}}</a></li>
+                                <li class="list-group-item active">Property Information</li>
+
+                     <li class="list-group-item"><span class="flaticon-bed">Number of Beds </span>{{$house_piece->houseBeds}}</li>
+                 <li class="list-group-item"> <span class="flaticon-bathtub">Number of Bathrooms </span>{{$house_piece->houseBaths}}</li>
+                <li class="list-group-item">Property Location: {{$house_piece->houseLocation}}</li>
+                <li class="list-group-item">Property Status: {{$house_piece->houseStatus}}</li>
+                <li class="list-group-item">Property Price Limit(KES): {{$house_piece->housePriceLimit}}</li>
+       
+            </ul>
+        </div> 
+
 		 				</div>
 
-		 				<div class="col-sm">
-		 							<div style="background-color: #000; padding: 10px;   border: 1px solid white;
-  border-radius: 5px;">
-
-                              <ul>
-                            <li><span class="flaticon-bed">Number of Beds </span>{{$house_piece->houseBeds}}</li>
-                                                        <li> <span class="flaticon-bathtub">Number of Bathrooms </span>{{$house_piece->houseBaths}}</li>
-
-                              </ul>
-		 					  <p>Property Location: {{$house_piece->houseLocation}}</p>
-		 					  <p>Property Status: {{$house_piece->houseStatus}}</p>
-		 					  <p>Property Price Limit(KES): {{$house_piece->housePriceLimit}}</p>
-		 					</div>
+	
+	
 		 				</div>
 		 			</div>
                      <br>
@@ -125,14 +129,13 @@
 	</section>
 
 
-
-    <div class="container" id="contact">
+                <div class="container" id="contact">
        <div class="jumbotron">
-             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive; color: #000;" >Get In Touch</h3>
+             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive;" >Get In Touch</h3>
 
           <!--the socials to get in touch-->
 <div class="container h-100 d-flex justify-content-center">
-    <a href="https://www.instagram.com" target="_blank" class="fa fa-envelope">   </a>
+    <a href="mailto:myemail@site.com?Subject=HutFarm%20inquiry" target="_blank" class="fa fa-envelope">   </a>
 
     <a href="https://www.instagram.com" target="_blank" class="fa fa-facebook">   </a>
     <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter">  </a>

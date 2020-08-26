@@ -6,8 +6,31 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
    <!--        icon library-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
 
       <!-- social links styling -->
         <style>
@@ -20,6 +43,10 @@
 
         }
 
+        .jumbotron{
+          background-color: transparent;
+        }
+
   
   
      </style>
@@ -27,7 +54,8 @@
 
 	<body style="background-color: whitesmoke;">
 
-   <!-- navbar -->
+ 
+  <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="navchoice" style="height: 50px; margin-bottom: 20px;">
         <div class="container">
           <a class="navbar-brand" href="#">
@@ -39,9 +67,8 @@
 
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Listing</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+              <li class="nav-item active"><a href="{{route('uploadchoice')}}" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="{{route('listing_choice')}}" class="nav-link">Listing</a></li>
               <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
               <li class="nav-item"><a href="{{route('logout')}}" class="nav-link">Logout</a></li>
             </ul>
@@ -49,6 +76,9 @@
         </div>
       </nav>
     <!-- END nav -->
+    <br>
+    <br>
+    <br>
     <div class="container">
     	<div class="jumbotron">
 
@@ -170,15 +200,13 @@
 
     		
  
-
-
-        <div class="container" id="contact">
+                <div class="container" id="contact">
        <div class="jumbotron">
              <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive;" >Get In Touch</h3>
 
           <!--the socials to get in touch-->
 <div class="container h-100 d-flex justify-content-center">
-    <a href="https://www.instagram.com" target="_blank" class="fa fa-envelope">   </a>
+    <a href="mailto:myemail@site.com?Subject=HutFarm%20inquiry" target="_blank" class="fa fa-envelope">   </a>
 
     <a href="https://www.instagram.com" target="_blank" class="fa fa-facebook">   </a>
     <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter">  </a>

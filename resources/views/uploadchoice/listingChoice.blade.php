@@ -46,6 +46,12 @@
            width: 100%;
            height: 200px;
         }
+
+        
+        .jumbotron{
+          background-color: transparent;
+        }
+
   
      </style>
 </head>
@@ -54,7 +60,7 @@
    <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="navchoice" style="height: 50px; margin-bottom: 20px;">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{route('welcome')}}">
             HutFarm
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -123,14 +129,13 @@
          </div>
       </div>
  
-
-    <div class="container" id="contact">
+                <div class="container" id="contact">
        <div class="jumbotron">
              <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive;" >Get In Touch</h3>
 
           <!--the socials to get in touch-->
 <div class="container h-100 d-flex justify-content-center">
-    <a href="https://www.instagram.com" target="_blank" class="fa fa-envelope">   </a>
+    <a href="mailto:myemail@site.com?Subject=HutFarm%20inquiry" target="_blank" class="fa fa-envelope">   </a>
 
     <a href="https://www.instagram.com" target="_blank" class="fa fa-facebook">   </a>
     <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter">  </a>
@@ -139,7 +144,6 @@
 </div>
        </div>
     </div>
-
 
   </body>
 </html>

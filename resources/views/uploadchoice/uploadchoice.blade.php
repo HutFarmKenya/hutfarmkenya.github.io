@@ -46,6 +46,16 @@
            width: 100%;
            height: 200px;
         }
+
+        .card-title{
+          color: #fff;
+        }
+
+        
+        .jumbotron{
+          background-color: transparent;
+        }
+
   
      </style>
 </head>
@@ -54,7 +64,7 @@
    <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="navchoice" style="height: 50px; margin-bottom: 20px;">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{route('welcome')}}">
             HutFarm
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +73,7 @@
 
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a href="{{route('home')}}" class="nav-link">Home</a></li>
+              <li class="nav-item active"><a href="{{route('welcome')}}" class="nav-link">Home</a></li>
               <li class="nav-item"><a href="{{route('listing_choice')}}" class="nav-link">Listing</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
               <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
@@ -137,13 +147,13 @@
       </div>
  
  <?php endforeach; ?>
-    <div class="container" id="contact">
+                <div class="container" id="contact">
        <div class="jumbotron">
              <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive;" >Get In Touch</h3>
 
           <!--the socials to get in touch-->
 <div class="container h-100 d-flex justify-content-center">
-    <a href="https://www.instagram.com" target="_blank" class="fa fa-envelope">   </a>
+    <a href="mailto:myemail@site.com?Subject=HutFarm%20inquiry" target="_blank" class="fa fa-envelope">   </a>
 
     <a href="https://www.instagram.com" target="_blank" class="fa fa-facebook">   </a>
     <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter">  </a>

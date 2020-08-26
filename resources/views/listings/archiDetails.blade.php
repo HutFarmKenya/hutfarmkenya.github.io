@@ -33,6 +33,11 @@
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
+
+        .jumbotron{
+          background-color: transparent;
+        }
+
   
      </style>
 
@@ -57,6 +62,10 @@
                 
 		 		<div class="container">
 		 				<div class="row">
+
+ 
+
+
 		 					 <?php foreach (json_decode($archi_pieces->images)as $picture) : ?>
 		 		<div class="col-sm-3">
 		 
@@ -73,7 +82,37 @@
 		 		</div>
 		 		<br>
 		 		<div class="container">
-		 			<div class="row">
+                      <div class="row">
+                      	<div class="col-sm">
+                      			 			   <div class="container ">
+<h3 class="bg-primary" style="padding: 10px; color: #fff; border-radius: 5px;">Listed By:</h3>            <ul class="list-group">
+                <li class="list-group-item">{{$archi_pieces->name}}</li>
+                <li class="list-group-item">{{$archi_pieces->email}}</li>
+                <li class="list-group-item">{{$archi_pieces->phone}}</li>
+                <li class="list-group-item"><a href="{{$archi_pieces->website}}">{{$archi_pieces->website}}</a></li>
+       
+                   <!--   <li class="list-group-item active">Your profile is important as it will be displayed to potential employers or investors</li> -->
+            </ul>
+        </div>     
+             	</div>
+
+                      	<div class="col-sm">
+                      		
+        		 			   <div class="container container-fluid">
+        		 		<h3 class="bg-info" style="padding: 10px; color: #fff; border-radius: 5px;">{{$archi_pieces->architectureName}}</h3>       
+        		 		     <ul class="list-group">	   	
+                <li class="list-group-item">{{$archi_pieces->architectureDesc}}</li>
+            
+              <!--   <li class="list-group-item active">Your profile is important as it will be displayed to potential employers or investors</li> -->
+            </ul>
+        </div>
+                      	</div>
+                      	
+                      </div>
+
+
+	
+		 			<!-- <div class="row">
 		 				<div class="col-sm">
 		 					<h3 class="bg-primary" style="padding: 10px; color: #fff; border-radius: 5px;">Listed By:</h3>
 		 									<div style="background-color: #000; padding: 10px;   border: 1px solid white;
@@ -108,7 +147,7 @@
 
 		 	</div>
 		 	
-
+ -->
 		 </div>
 
 
@@ -120,14 +159,13 @@
 	</section>
 
 
-
-    <div class="container" id="contact">
+                <div class="container" id="contact">
        <div class="jumbotron">
              <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive; color: #000;"  >Get In Touch</h3>
 
           <!--the socials to get in touch-->
 <div class="container h-100 d-flex justify-content-center">
-    <a href="https://www.instagram.com" target="_blank" class="fa fa-envelope">   </a>
+    <a href="mailto:myemail@site.com?Subject=HutFarm%20inquiry" target="_blank" class="fa fa-envelope">   </a>
 
     <a href="https://www.instagram.com" target="_blank" class="fa fa-facebook">   </a>
     <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter">  </a>

@@ -17,7 +17,14 @@
             border-radius: 50%;
             text-decoration: none;
 
+
         }
+
+        
+        .jumbotron{
+          background-color: transparent;
+        }
+
 
         img {
            width: 100%;
@@ -71,22 +78,27 @@
 		 		<div class="container">
 		 			<div class="row">
 		 				<div class="col-sm">
-		 						<h3 class="bg-primary" style="padding: 10px; color: #fff; border-radius: 5px;">Listed By:</h3>
-		 													<div style="background-color: #000; padding: 10px;   border: 1px solid white;
-  border-radius: 5px;">
-		 						<p>{{$company_piece->name}}</p>
-		 					<p>{{$company_piece->email}}</p>
-		 					<p>{{$company_piece->phone}}</p>
-		 					<p>{{$company_piece->website}}</p>
-</div>
+                                                                 <div class="container ">
+<h3 class="bg-primary" style="padding: 10px; color: #fff; border-radius: 5px;">Listed By:</h3>            <ul class="list-group">
+                <li class="list-group-item">{{$company_piece->name}}</li>
+                <li class="list-group-item">{{$company_piece->email}}</li>
+                <li class="list-group-item">{{$company_piece->phone}}</li>
+                <li class="list-group-item"><a href="{{$company_piece->website}}">{{$company_piece->website}}</a></li>
+       
+            </ul>
+        </div> 
+
 		 				</div>
 
 		 				<div class="col-sm">
-		 																		<div style="background-color: #000; padding: 10px;   border: 1px solid white;
-  border-radius: 5px;">
-		 					  <p>{{$company_piece->companyServiceName}}</p>
-		 					  <p>{{$company_piece->companyServiceDescription}}</p>
-		 					 </div>
+            <ul class="list-group">
+                <li class="list-group-item active">{{$company_piece->companyServiceName}}</li>
+                <li class="list-group-item">{{$company_piece->companyServiceDescription}}</li>
+           
+       
+            </ul>
+        </div> 
+
 		 				</div>
 		 			</div>
                      
@@ -108,13 +120,13 @@
 
 
 
-    <div class="container" id="contact">
+                <div class="container" id="contact">
        <div class="jumbotron">
-             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive; color: #000;" >Get In Touch</h3>
+             <h3 class="container h-100 d-flex justify-content-center" style="font-family: 'Comfortaa', cursive;" >Get In Touch</h3>
 
           <!--the socials to get in touch-->
 <div class="container h-100 d-flex justify-content-center">
-    <a href="https://www.instagram.com" target="_blank" class="fa fa-envelope">   </a>
+    <a href="mailto:myemail@site.com?Subject=HutFarm%20inquiry" target="_blank" class="fa fa-envelope">   </a>
 
     <a href="https://www.instagram.com" target="_blank" class="fa fa-facebook">   </a>
     <a href="https://www.twitter.com" target="_blank" class="fa fa-twitter">  </a>
